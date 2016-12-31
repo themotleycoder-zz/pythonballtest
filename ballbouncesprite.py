@@ -33,16 +33,7 @@ class Ball(pygame.sprite.Sprite):
         self.speed = speed
         self.radius = self.rect.right / 2
         self.center = (self.rect.right / 2, self.rect.bottom / 2)
-        self.mass = 1
-
-        # w = self.orig_image.get_width()
-        # h = self.orig_image.get_height()
-        # self.image = pygame.transform.scale(self.orig_image, (int(w * scale), int(w * scale)))
-        # self.circle_image = pygame.draw.circle(self.image, (255,0,0), (self.image.get_size()[0] / 2,self.image.get_size()[0] / 2), self.image.get_size()[0] / 2, 0)
-        # self.rect = self.orig_image.get_rect()
-        # self.radius = (self.circle_image[2] - self.circle_image[0])/ 2
-        # self.speed = speed
-        # self.center = (self.circle_image[2] / 2, self.circle_image[3] / 2)
+        self.mass = (math.pi * (self.radius*self.radius))/2
 
     def move(self):
 
